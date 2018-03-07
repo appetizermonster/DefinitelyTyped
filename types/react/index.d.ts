@@ -262,6 +262,10 @@ declare namespace React {
         element: ReactElement<P>,
         props?: Q, // should be Q & Attributes
         ...children: ReactNode[]): ReactElement<P>;
+    function cloneElement<P>(
+        element: ReactElement<P>,
+        props?: Partial<P> & Partial<Attributes>,
+        ...children: ReactNode[]): ReactElement<P>;
 
     function isValidElement<P>(object: {} | null | undefined): object is ReactElement<P>;
 
